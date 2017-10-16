@@ -1,0 +1,7 @@
+<suite name="mavenProject.MessengerAutomation">
+	<test name="testngTest">
+		<classes>
+			<class name="mavenProject.MessengerTestScript.MainMessenger" />
+		</classes>
+	</test>
+</suite>
