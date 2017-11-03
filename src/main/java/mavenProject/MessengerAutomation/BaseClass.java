@@ -23,18 +23,18 @@ public class BaseClass {
 		capabilities.setCapability("appPackage", "com.facebook.orca");
 		capabilities.setCapability("appActivity", "com.facebook.orca.auth.StartScreenActivity");
 		
-		//capabilities.setCapability("noReset", "true");
-		//capabilities.setCapability("fullReset", false);
+		capabilities.setCapability("noReset", "true");
+		capabilities.setCapability("fullReset", false);
 		
 		// ?? MalformedURLException
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
+//System.out.println();
 	}
 
 	public AndroidDriver getDriver() {
-
-		return this.driver;
+	
+		return driver;
 	}
 
 	@AfterTest

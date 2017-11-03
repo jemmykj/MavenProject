@@ -20,7 +20,7 @@ public class MainMessenger extends BaseClass {
 	}
 
 	public void homeTab() throws Exception {
-		getDriver().findElementById("com.facebook.orca:id/home_nested_tab").click();
+		//getDriver().findElementById("com.facebook.orca:id/home_nested_tab").click();
 	}
 
 	public void verticalScrolling(int n) throws Exception {
@@ -74,7 +74,7 @@ public class MainMessenger extends BaseClass {
 			getDriver().findElement(By.id("com.facebook.orca:id/skip_step")).click();
 			getDriver().findElement(By.id("com.facebook.orca:id/button2")).click();
 			defaultHome();
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 		}
 
 	}
@@ -291,7 +291,7 @@ public class MainMessenger extends BaseClass {
 		verticalScrolling(3);
 	}
 
-	// @Test
+	//@Test
 	public void discoverTab() throws Exception {
 		defaultHome();
 

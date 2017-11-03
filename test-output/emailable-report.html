@@ -31,35 +31,84 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">3</td><td class="numi">14.9 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">290.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="3">mavenProject.MessengerTestScript.MainMessenger</td><td><a href="#m1"><b>loginScreen</b>  </a></td><td class="numi">1</td><td>1508125633282</td><td class="numi">4013</td></tr><tr class="failedodd"><td><a href="#m2"><b>openMessages</b>  </a></td><td class="numi">1</td><td>1508125637299</td><td class="numi">2003</td></tr><tr class="failedodd"><td><a href="#m3"><b>verifyInbox</b>  </a></td><td class="numi">1</td><td>1508125639304</td><td class="numi">2</td></tr>
+<tr class="failedodd"><td rowspan="2">mavenProject.MessengerTestScript.MainMessenger</td><td><a href="#m1"><b>openMessages</b>  </a></td><td class="numi">1</td><td>1509241645635</td><td class="numi">64451</td></tr><tr class="failedodd"><td><a href="#m2"><b>verifyInbox</b>  </a></td><td class="numi">1</td><td>1509241710096</td><td class="numi">171136</td></tr>
+<tr><th colspan="4">Default test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">mavenProject.MessengerTestScript.MainMessenger</td><td><a href="#m3"><b>loginScreen</b>  </a></td><td class="numi">1</td><td>1509241610205</td><td class="numi">35428</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">mavenProject.MessengerTestScript.MainMessenger:loginScreen</h2>
+<h2 id="m1">mavenProject.MessengerTestScript.MainMessenger:openMessages</h2>
 <div style="padding-left:3em">
-<p>null</p>
-mavenProject.MessengerTestScript.MainMessenger.loginScreen(MainMessenger.java:44)
+<p>An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;jemmyj-mba&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.facebook.orca, deviceScreenSize=1080x1920, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=030834eed0218526, platform=LINUX, deviceUDID=030834eed0218526, appActivity=com.facebook.orca.auth.StartScreenActivity, desired={appPackage=com.facebook.orca, appActivity=com.facebook.orca.auth.StartScreenActivity, platformName=Android, deviceName=030834eed0218526}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Nexus 5, platformName=Android, deviceManufacturer=LGE}]
+Session ID: 8f0a2e72-9999-4772-81cd-0d60f7d1b8f5
+*** Element info: {Using=id, value=com.facebook.orca:id/home_nested_tab}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+<br/>at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+<br/>at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+<br/>at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+<br/>at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+<br/>at mavenProject.MessengerTestScript.MainMessenger.homeTab(MainMessenger.java:23)
+<br/>at mavenProject.MessengerTestScript.MainMessenger.openMessages(MainMessenger.java:96)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m2">mavenProject.MessengerTestScript.MainMessenger:verifyInbox</h2>
 <div style="padding-left:3em">
-<p>null</p>
-mavenProject.MessengerTestScript.MainMessenger.homeTab(MainMessenger.java:23)
+<p>An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 16.91 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;jemmyj-mba&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.facebook.orca, deviceScreenSize=1080x1920, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=030834eed0218526, platform=LINUX, deviceUDID=030834eed0218526, appActivity=com.facebook.orca.auth.StartScreenActivity, desired={appPackage=com.facebook.orca, appActivity=com.facebook.orca.auth.StartScreenActivity, platformName=Android, deviceName=030834eed0218526}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=Nexus 5, platformName=Android, deviceManufacturer=LGE}]
+Session ID: 8f0a2e72-9999-4772-81cd-0d60f7d1b8f5
+*** Element info: {Using=id, value=com.facebook.orca:id/home_nested_tab}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+<br/>at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+<br/>at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+<br/>at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+<br/>at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+<br/>at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+<br/>at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+<br/>at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+<br/>at mavenProject.MessengerTestScript.MainMessenger.homeTab(MainMessenger.java:23)
 <br/>at mavenProject.MessengerTestScript.MainMessenger.verifyInbox(MainMessenger.java:85)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">mavenProject.MessengerTestScript.MainMessenger:openMessages</h2>
-<div style="padding-left:3em">
-<p>null</p>
-mavenProject.MessengerTestScript.MainMessenger.homeTab(MainMessenger.java:23)
-<br/>at mavenProject.MessengerTestScript.MainMessenger.openMessages(MainMessenger.java:96)
-<br/>25 lines not shown
-</div>
+<h2 id="m3">mavenProject.MessengerTestScript.MainMessenger:loginScreen</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
