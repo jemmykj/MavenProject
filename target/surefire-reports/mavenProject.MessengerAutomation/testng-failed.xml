@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [mavenProject.MessengerAutomation]">
+<suite name="Failed suite [mavenProject.MessengerAutomation]" verbose="0">
   <test name="testngTest(failed)">
     <classes>
       <class name="mavenProject.MessengerTestScript.MainMessenger">
         <methods>
           <include name="openMessages"/>
           <include name="loginScreen"/>
-          <include name="verifyInbox"/>
           <include name="setUp"/>
+          <include name="end"/>
         </methods>
       </class> <!-- mavenProject.MessengerTestScript.MainMessenger -->
     </classes>

@@ -12,20 +12,25 @@ import mavenProject.MessengerAutomation.BaseClass;
 
 public class MainMessenger extends BaseClass {
 
-	Dimension size;
+	Dimension size; // To get size of the screen
 
+	// method to set the tab to default Home Tab
 	public void defaultHome() throws Exception {
 
 		getDriver().findElementById("com.facebook.orca:id/recents_tab").click();
 	}
 
+	// method to go to Home tab
 	public void homeTab() throws Exception {
-		//getDriver().findElementById("com.facebook.orca:id/home_nested_tab").click();
+		// getDriver().findElementById("com.facebook.orca:id/home_nested_tab").click();
 	}
 
+	// method for vertical scrolling of page
 	public void verticalScrolling(int n) throws Exception {
 		try {
+			// size of the page
 			size = getDriver().manage().window().getSize();
+
 			int start_y = (int) (size.getHeight() * 0.4);
 			int end_y = (int) (size.getHeight() * 0.2);
 			int x = (int) (size.getWidth() * 0.2);
@@ -37,21 +42,23 @@ public class MainMessenger extends BaseClass {
 		}
 	}
 
-	@Test
+	@Test // method to check login
 	public void loginScreen() throws Exception {
+		// inserted wait time as it takes time to load
 		Thread.sleep(4000);
-		System.out.println(" driver " + getDriver());
-		WebElement log= getDriver().findElement(By.id("com.facebook.orca:id/login"));
-		if (log==null)
-		{
+
+		// System.out.println(" driver " + getDriver());
+		WebElement log = getDriver().findElement(By.id("com.facebook.orca:id/login"));
+		if (log == null) {
 			System.out.println("null");
 		}
 		Boolean isLogin = getDriver().findElements(By.id("com.facebook.orca:id/login")).size() != 0;
 		Boolean isLoginGroup = getDriver().findElements(By.id("com.facebook.orca:id/login_group")).size() > 0;
-		
-		/*if
-		 (driver.findElement(By.id("com.facebook.orca:id/login")).isDisplayed()) {*/
-		 
+
+		/*
+		 * if (driver.findElement(By.id("com.facebook.orca:id/login")).isDisplayed()) {
+		 */
+
 		if (isLogin) {
 			System.out.println("isLogin");
 			getDriver().findElement(By.id("com.facebook.orca:id/login")).click();
@@ -63,7 +70,7 @@ public class MainMessenger extends BaseClass {
 			Thread.sleep(2000);
 		} else {
 			System.out.println("USER ALREADY LOGGED IN");
-			
+
 			defaultHome();
 		}
 	}
@@ -79,9 +86,10 @@ public class MainMessenger extends BaseClass {
 
 	}
 
-	@Test
+	@Test //method to verify inbox by scrolling down
 	public void verifyInbox() throws Exception {
 		System.out.println("VERIFYING INBOX");
+		//got to inbox or home tab
 		homeTab();
 		verticalScrolling(15);
 
@@ -130,16 +138,16 @@ public class MainMessenger extends BaseClass {
 			getDriver().findElement(By.id("com.facebook.orca:id/up")).click();
 		}
 		/*
-		 * if (driver.findElement(By.id("com.facebook.orca:id/up")).isDisplayed
-		 * ()) {System.out.println("disp");
+		 * if (driver.findElement(By.id("com.facebook.orca:id/up")).isDisplayed ())
+		 * {System.out.println("disp");
 		 * driver.findElement(By.id("com.facebook.orca:id/up")).click(); } else
-		 * driver.findElementById(
-		 * "com.facebook.orca:id/quicksilver_back_button" ).click();
+		 * driver.findElementById( "com.facebook.orca:id/quicksilver_back_button"
+		 * ).click();
 		 */
 
 	}
-	
-	//@Test
+
+	// @Test
 	public void tabActive() throws Exception {
 		homeTab();
 		System.out.println("VERIFYING ACTIVE TAB");
@@ -156,9 +164,12 @@ public class MainMessenger extends BaseClass {
 		// driver.findElementById("com.facebook.orca:id/empty_contacts_invite_friends_upsell_layout").getTagName();
 		// driver.findElementById("com.facebook.orca:id/empty_contacts_invite_friends_upsell_layout").getText();
 
-		Boolean isActiveList= getDriver().findElements(By.id("com.facebook.orca:id/empty_contacts_title_for_ig_upsell")).size()>0;
-		//if (driver.findElementById("com.facebook.orca:id/empty_contacts_title_for_ig_upsell").isDisplayed()) {
-		if (isActiveList){
+		Boolean isActiveList = getDriver()
+				.findElements(By.id("com.facebook.orca:id/empty_contacts_title_for_ig_upsell")).size() > 0;
+		// if
+		// (driver.findElementById("com.facebook.orca:id/empty_contacts_title_for_ig_upsell").isDisplayed())
+		// {
+		if (isActiveList) {
 			System.out.println("NO CONTACTS FOUND");
 		} else {
 			System.out.println("in");
@@ -173,7 +184,7 @@ public class MainMessenger extends BaseClass {
 
 	}
 
-	//@Test
+	// @Test
 	public void tabGroups() throws Exception {
 
 		System.out.println("VERIFYING GROUP TABS");
@@ -194,12 +205,12 @@ public class MainMessenger extends BaseClass {
 
 	}
 
-	//@Test
+	// @Test
 	public void tabCalls() throws Exception {
 		System.out.println("VERIFYING CALL TABS");
 		homeTab();
-		//defaultHome();
-		
+		// defaultHome();
+
 		Thread.sleep(2000);
 		getDriver().findElementById("com.facebook.orca:id/call_tab").click();
 		Thread.sleep(1000);
@@ -207,13 +218,13 @@ public class MainMessenger extends BaseClass {
 		homeTab();
 	}
 
-	//@Test
+	// @Test
 	public void composeMessage() throws Exception {
 		Thread.sleep(5000);
 		homeTab();
 		getDriver().findElementByAccessibilityId("Write Message").click();
-		getDriver().findElement(By
-				.xpath("//android.widget.EditText[@resource-id='com.facebook.orca:id/contact_picker_autocomplete_input']"))
+		getDriver().findElement(By.xpath(
+				"//android.widget.EditText[@resource-id='com.facebook.orca:id/contact_picker_autocomplete_input']"))
 				.sendKeys("jentest mal");
 
 		getDriver().findElement(By
@@ -221,16 +232,20 @@ public class MainMessenger extends BaseClass {
 				.click();
 		// if
 		// (driver.findElement(By.id("com.facebook.orca:id/message_requests_accept_button")).isDisplayed())
-		Boolean isAccept = getDriver().findElements(By.id("com.facebook.orca:id/message_requests_accept_button")).size() > 0;
+		Boolean isAccept = getDriver().findElements(By.id("com.facebook.orca:id/message_requests_accept_button"))
+				.size() > 0;
 		if (isAccept) {
 			getDriver().findElement(By.id("com.facebook.orca:id/message_requests_accept_button")).click();
 		}
-		getDriver().findElement(By.xpath("//android.widget.EditText[@resource-id='com.facebook.orca:id/text_input_bar']"))
+		getDriver()
+				.findElement(By.xpath("//android.widget.EditText[@resource-id='com.facebook.orca:id/text_input_bar']"))
 				.click();
-		getDriver().findElement(By.xpath("//android.widget.EditText[@resource-id='com.facebook.orca:id/text_input_bar']"))
+		getDriver()
+				.findElement(By.xpath("//android.widget.EditText[@resource-id='com.facebook.orca:id/text_input_bar']"))
 				.sendKeys("Auto");
-		getDriver().findElement(
-				By.xpath("//android.widget.ImageView[@resource-id='com.facebook.orca:id/composer_send_action_button']"))
+		getDriver()
+				.findElement(By.xpath(
+						"//android.widget.ImageView[@resource-id='com.facebook.orca:id/composer_send_action_button']"))
 				.click();
 		getDriver().findElement(By.id("com.facebook.orca:id/up")).click();
 		// driver.findElementByAccessibilityId("Navigate Up").click();
@@ -269,29 +284,28 @@ public class MainMessenger extends BaseClass {
 		// ?? why does it click the element not in class RelativeLayout
 		/*
 		 * for (WebElement pList:gameList) {System.out.println("ho" +
-		 * pList.getTagName()); verticalScrolling(2); pList.click();
-		 * Thread.sleep(1000);
+		 * pList.getTagName()); verticalScrolling(2); pList.click(); Thread.sleep(1000);
 		 * driver.findElementById("com.facebook.orca:id/quicksilver_back_button"
 		 * ).click();
 		 * 
 		 * }
 		 */
-		//System.out.println("game list size " + gameList.size());
+		// System.out.println("game list size " + gameList.size());
 		for (int i = 1; i < gameList.size(); i++) {
 			System.out.println("size " + gameList.size() + " i " + i);
 
-			//System.out.println("i inside loop");
-			if (i % 3 == 0) {//System.out.println("in");
+			// System.out.println("i inside loop");
+			if (i % 3 == 0) {// System.out.println("in");
 				clickMessage(i, gameList);
 			}
 			Thread.sleep(3000);
-			//System.out.println("after click ");
+			// System.out.println("after click ");
 
 		}
 		verticalScrolling(3);
 	}
 
-	//@Test
+	// @Test
 	public void discoverTab() throws Exception {
 		defaultHome();
 
@@ -304,8 +318,7 @@ public class MainMessenger extends BaseClass {
 		Thread.sleep(2000);
 		/*
 		 * for (WebElement ldiscover : discoverLists) { //
-		 * driver.findElement(By.xpath("//android.view.View[@index='5']")).click
-		 * ();
+		 * driver.findElement(By.xpath("//android.view.View[@index='5']")).click ();
 		 * 
 		 * driver.findElement(By.id(
 		 * "com.facebook.orca:id/platform_landing_page_back_button")).click(); }
@@ -332,6 +345,5 @@ public class MainMessenger extends BaseClass {
 		 */
 
 	}
-
 
 }

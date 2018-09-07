@@ -6,9 +6,9 @@
       <class name="mavenProject.MessengerTestScript.MainMessenger">
         <methods>
           <include name="openMessages"/>
+          <include name="loginScreen"/>
           <include name="verifyInbox"/>
           <include name="setUp"/>
-          <include name="end"/>
         </methods>
       </class> <!-- mavenProject.MessengerTestScript.MainMessenger -->
     </classes>

@@ -1,18 +1,31 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 4, Time elapsed: 1.18 s <<< FAILURE! - in TestSuite
-setUp(mavenProject.MessengerTestScript.MainMessenger)  Time elapsed: 1.071 s  <<< FAILURE!
-org.openqa.selenium.remote.UnreachableBrowserException: 
-Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 55.406 s <<< FAILURE! - in TestSuite
+loginScreen(mavenProject.MessengerTestScript.MainMessenger)  Time elapsed: 19.233 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.20 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'jemmyj-mba', ip: '172.24.208.161', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_60'
-Driver info: driver.version: AndroidDriver
-Caused by: org.openqa.selenium.WebDriverException: 
-org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused
+System info: host: 'jemmyj-macbookpro.roam.corp.google.com', ip: '192.168.0.108', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '9.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.facebook.orca, deviceScreenSize=1080x1920, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=HT445WM01757, fullReset=false, platform=LINUX, deviceUDID=HT445WM01757, appActivity=com.facebook.orca.auth.StartScreenActivity, desired={appPackage=com.facebook.orca, appActivity=com.facebook.orca.auth.StartScreenActivity, noReset=true, platformName=Android, deviceName=030834eed0218526, fullReset=false}, platformVersion=5.0.2, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=HTC One_M8, platformName=Android, deviceManufacturer=HTC}]
+Session ID: 1b53bd45-bd5b-4805-9042-f7cb898ced31
+*** Element info: {Using=id, value=com.facebook.orca:id/login}
+	at mavenProject.MessengerTestScript.MainMessenger.loginScreen(MainMessenger.java:44)
+
+openMessages(mavenProject.MessengerTestScript.MainMessenger)  Time elapsed: 17.4 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.40 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'jemmyj-mba', ip: '172.24.208.161', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_60'
-Driver info: driver.version: AndroidDriver
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused
-Caused by: java.net.ConnectException: Connection refused
+System info: host: 'jemmyj-macbookpro.roam.corp.google.com', ip: '192.168.0.108', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '9.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.facebook.orca, deviceScreenSize=1080x1920, networkConnectionEnabled=true, noReset=true, warnings={}, databaseEnabled=false, deviceName=HT445WM01757, fullReset=false, platform=LINUX, deviceUDID=HT445WM01757, appActivity=com.facebook.orca.auth.StartScreenActivity, desired={appPackage=com.facebook.orca, appActivity=com.facebook.orca.auth.StartScreenActivity, noReset=true, platformName=Android, deviceName=030834eed0218526, fullReset=false}, platformVersion=5.0.2, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=HTC One_M8, platformName=Android, deviceManufacturer=HTC}]
+Session ID: 1b53bd45-bd5b-4805-9042-f7cb898ced31
+*** Element info: {Using=id, value=com.facebook.orca:id/recents_tab}
+	at mavenProject.MessengerTestScript.MainMessenger.defaultHome(MainMessenger.java:19)
+	at mavenProject.MessengerTestScript.MainMessenger.openMessages(MainMessenger.java:97)
 
